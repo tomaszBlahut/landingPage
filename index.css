@@ -16,12 +16,13 @@ body {
   height: 100vh;
   min-height: 0px;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white; }
   #about #businessCard {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 30px;
-    color: white;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 90px;
@@ -31,35 +32,13 @@ body {
       text-transform: capitalize;
       font-variant: small-caps;
       font-weight: bold; }
-
-#technologyStack {
-  background-color: rgba(64, 71, 79, 0.85);
-  color: white;
-  padding-bottom: 80px; }
-
-#socialMedia {
-  background-color: rgba(197, 197, 183, 0.85);
-  color: black; }
-
-section {
-  min-height: 50vh;
-  box-sizing: border-box;
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-content: center; }
-  section h1 {
-    font-weight: bold;
-    font-size: 25pt;
-    text-align: center;
-    text-decoration: underline; }
-  section div {
+  #about #socialMediaBadges {
+    background-color: rgba(197, 197, 183, 0.9);
+    border-radius: 30px;
+    padding: 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 10px; }
+    justify-content: space-evenly; }
 
 .badgeBox img {
   background-image: linear-gradient(rgba(249, 253, 254, 0.85), rgba(249, 253, 254, 0.85));
@@ -73,51 +52,5 @@ section {
   border-radius: 30px; }
 .badgeBox img:hover {
   background-size: 100% 100%; }
-
-#footerPlaceKeeper {
-  height: 60px; }
-
-footer {
-  margin-top: -30px;
-  height: 29px;
-  padding: 1px;
-  margin-left: 20%;
-  margin-right: 20%;
-  background-color: rgba(249, 253, 254, 0.425);
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px; }
-  footer p {
-    text-align: center;
-    margin: 5px; }
-
-aside {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  font-size: 40pt;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  white-space: nowrap; }
-  aside p {
-    max-width: 1ch;
-    overflow: hidden;
-    padding: 10px;
-    margin: 0;
-    background-color: rgba(249, 253, 254, 0.85);
-    transition: 0.5s ease-in-out; }
-    aside p a {
-      text-decoration: none;
-      color: #40474f; }
-  aside p:first-child {
-    border-top-right-radius: 15px; }
-  aside p:last-child {
-    border-bottom-right-radius: 15px; }
-  aside p:hover {
-    max-width: 100%;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px; }
 
 /*# sourceMappingURL=index.css.map */

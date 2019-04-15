@@ -1,0 +1,195 @@
+$primaryColor: #696a6f;
+$secondaryColor: #c5c5b7;
+$tertiaryColor: #40474f;
+$quaternaryColor: #f9fdfe;
+
+$backgroundImagePath: "./images/background.jpg";
+
+$sectionPadding: 80px;
+$sectionRoundCornerSize: 30px;
+
+$contentWidth: 60%;
+
+$badgeSize: 100px;
+$sectionBackgroundColorOpacity: 0.85;
+
+$footerHeight: 30px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: $primaryColor;
+    background-image: url($backgroundImagePath);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: 'Carrois Gothic';
+}
+
+#about {
+    height: 100vh;
+    min-height: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #businessCard {
+        background-color: rgba($color: black, $alpha: 0.9);
+        border-radius: $sectionRoundCornerSize;
+        color: white;
+        padding-top: $sectionRoundCornerSize;
+        padding-bottom: $sectionRoundCornerSize;
+        padding-left: $sectionRoundCornerSize * 3;
+        padding-right: $sectionRoundCornerSize * 3;
+
+        font-size: 30pt;
+
+        p {
+            text-transform: capitalize;
+            font-variant: small-caps;     
+            font-weight: bold; 
+        }
+    }
+}
+
+#technologyStack {
+    background-color: rgba($tertiaryColor, $sectionBackgroundColorOpacity);
+    color: white;
+
+    padding-bottom: $sectionPadding;
+}
+
+#socialMedia {
+    background-color: rgba($secondaryColor, $sectionBackgroundColorOpacity);
+    color: black;
+}
+
+section {
+    min-height: 50vh;
+    box-sizing: border-box;
+    
+    padding-left: (100% - $contentWidth) / 2;
+    padding-right: (100% - $contentWidth) / 2;
+
+    padding-top: $sectionPadding / 2;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    h1 {
+        font-weight: bold;
+        font-size: 25pt;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        padding: 10px;
+    }
+}
+
+.badgeBox {
+    $imagePadding: 10px;
+    $imageBackgroundColor: rgba($quaternaryColor, $sectionBackgroundColorOpacity);
+    img {
+        background-image: linear-gradient($imageBackgroundColor, $imageBackgroundColor);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 0% 0%;
+        transition: background-size .3s;
+
+        width: $badgeSize + $imagePadding * 2;
+        height: $badgeSize + $imagePadding * 2;
+
+        padding: $imagePadding;
+        border-radius: $sectionRoundCornerSize;
+    }
+
+    img:hover {
+        background-size: 100% 100%;
+    }
+}
+
+#footerPlaceKeeper {
+    height: $footerHeight * 2;
+}
+
+footer {
+    $footerPadding: 1px;
+    margin-top: -$footerHeight;
+    height: $footerHeight - $footerPadding;
+    padding: $footerPadding;
+
+    margin-left: (100% - $contentWidth) / 2;
+    margin-right: (100% - $contentWidth) / 2;
+
+    background-color: rgba($quaternaryColor, $sectionBackgroundColorOpacity / 2);
+
+    border-top-left-radius: $sectionRoundCornerSize;
+    border-top-right-radius: $sectionRoundCornerSize;
+
+    p {
+        text-align: center;
+        margin: 5px;
+    }
+}
+
+aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+
+    font-size: 40pt;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    white-space: nowrap;
+
+    p {
+        max-width: 1ch;
+
+        overflow: hidden;
+        padding: 10px;
+        margin: 0;
+
+        background-color: rgba($quaternaryColor, $sectionBackgroundColorOpacity);
+        transition: 0.5s ease-in-out;
+
+        a {
+            text-decoration: none;
+            color: $tertiaryColor;
+        }
+    }
+
+    p:first-child {
+        border-top-right-radius: $sectionRoundCornerSize / 2;
+    }
+
+    p:last-child {
+        border-bottom-right-radius: $sectionRoundCornerSize / 2;
+    }
+
+    p:hover {
+        max-width: 100%;
+
+        border-bottom-right-radius: $sectionRoundCornerSize / 2;
+        border-top-right-radius: $sectionRoundCornerSize / 2;
+    }
+}

@@ -1,24 +1,20 @@
-$primaryColor: #696a6f;
-$secondaryColor: #c5c5b7;
-$tertiaryColor: #f9fdfe;
+$primary-color: #696a6f;
+$secondary-color: #c5c5b7;
+$tertiary-color: #f9fdfe;
 
-$backgroundImagePath: "./images/background.jpg";
+$background-image-path: "./images/background.jpg";
 
-$sectionRoundCornerSize: 30px;
+$section-round-corner-size: 30px;
 
-$badgeSize: 100px;
-$sectionBackgroundColorOpacity: 0.85;
-
-html {
-    scroll-behavior: smooth;
-}
+$badge-size: 100px;
+$section-background-color-opacity: 0.85;
 
 body {
     margin: 0;
     padding: 0;
 
-    background-color: $primaryColor;
-    background-image: url($backgroundImagePath);
+    background-color: $primary-color;
+    background-image: url($background-image-path);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -38,13 +34,13 @@ body {
 
     color: white;
 
-    #businessCard {
+    #business-card {
         background-color: rgba($color: black, $alpha: 0.9);
-        border-radius: $sectionRoundCornerSize;
-        padding-top: $sectionRoundCornerSize;
-        padding-bottom: $sectionRoundCornerSize;
-        padding-left: $sectionRoundCornerSize * 3;
-        padding-right: $sectionRoundCornerSize * 3;
+        border-radius: $section-round-corner-size;
+        padding-top: $section-round-corner-size;
+        padding-bottom: $section-round-corner-size;
+        padding-left: $section-round-corner-size * 3;
+        padding-right: $section-round-corner-size * 3;
 
         font-size: 30pt;
 
@@ -55,10 +51,10 @@ body {
         }
     }
 
-    #socialMediaBadges {
-        background-color: rgba($color: $secondaryColor, $alpha: 0.9);
-        border-radius: $sectionRoundCornerSize;
-        padding: $sectionRoundCornerSize;
+    #social-media-badges {
+        background-color: rgba($color: $secondary-color, $alpha: 0.9);
+        border-radius: $section-round-corner-size;
+        padding: $section-round-corner-size;
 
         display: flex;
         flex-direction: row;
@@ -66,21 +62,21 @@ body {
     }
 }
 
-.badgeBox {
-    $imagePadding: 10px;
-    $imageBackgroundColor: rgba($tertiaryColor, $sectionBackgroundColorOpacity);
+.badge-box {
+    $image-padding: 10px;
+    $image-background-color: rgba($tertiary-color, $section-background-color-opacity);
     img {
-        background-image: linear-gradient($imageBackgroundColor, $imageBackgroundColor);
+        background-image: linear-gradient($image-background-color, $image-background-color);
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: 0% 0%;
         transition: background-size .3s;
 
-        width: $badgeSize + $imagePadding * 2;
-        height: $badgeSize + $imagePadding * 2;
+        width: $badge-size + $image-padding * 2;
+        height: $badge-size + $image-padding * 2;
 
-        padding: $imagePadding;
-        border-radius: $sectionRoundCornerSize;
+        padding: $image-padding;
+        border-radius: $section-round-corner-size;
     }
 
     img:hover {
